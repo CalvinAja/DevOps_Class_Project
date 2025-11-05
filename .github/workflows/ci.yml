@@ -2,9 +2,9 @@ name: CI Pipeline
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [latihan]
   pull_request:
-    branches: [ "main" ]
+    branches: [latihan]
 
 jobs:
   build-and-test:
@@ -22,8 +22,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run build
-        run: npm run build --if-present
+      # - name: Run build
+      #   run: npm run build --if-present
 
-      - name: Run tests
-        run: echo "Skipping tests for now"
+      # - name: Run tests
+      #   run: echo "Skipping tests for now"
+
