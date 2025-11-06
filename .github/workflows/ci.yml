@@ -19,7 +19,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       
       - name: Build image
-        run: Docker run -t calvinaja/webserver:latest .
+        run: docker run -t calvinaja/webserver:latest .
       
       - name: Push image
-        run: Docker push calvinaja/webserver:latest
+        run: docker push calvinaja/webserver:latest
