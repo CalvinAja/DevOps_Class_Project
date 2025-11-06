@@ -5,19 +5,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="site.css" type="text/css">
+    <title>interact | SynBio Ltd</title>
 </head>
 
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pies.html">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside><img src="images/logo.png" alt="SynBio logo"></aside>
+        <article>
+            <h1>Interact</h1>
+            <p>We are always glad to hear from you!</p>
+
+            <div class="input-area" style="margin-bottom: 20px;">
+                <label for="textInput">Masukkan Teks Anda di Sini:</label><br>
+                <input type="text" id="textInput" placeholder="Ketik sesuatu..." style="width: 80%; padding: 8px;">
+                <button onclick="tampilkanTeks()" style="padding: 8px 15px;">Tampilkan</button>
+            </div>
+
+            <h2>Hasil Input:</h2>
+            <p id="outputDisplay" style="border: 1px solid #ccc; padding: 10px; min-height: 20px; background-color: #f9f9f9;">
+                Teks yang Anda masukkan akan muncul di sini.
+            </p>
+        </article>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pies.html">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </footer>
+
     <script>
-        function greet(name) {
-            return "Hello";
+        function tampilkanTeks() {
+            // 1. Ambil elemen input teks berdasarkan ID-nya
+            const inputElement = document.getElementById('textInput');
+            // Ambil nilai (value) dari input tersebut
+            const inputText = inputElement.value;
+
+            // 2. Ambil elemen paragraf output berdasarkan ID-nya
+            const outputElement = document.getElementById('outputDisplay');
+
+            // 3. Masukkan nilai input teks ke dalam elemen output
+            outputElement.innerHTML = `<strong>Teks Anda:</strong> ${inputText}`;
+
+            // Opsional: Kosongkan input setelah ditampilkan (uncomment baris di bawah)
+            // inputElement.value = '';
         }
-
-        let message = greet();
-        console.log(message);
     </script>
-
 </body>
 
 </html>
